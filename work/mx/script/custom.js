@@ -1,32 +1,13 @@
-
 $(document).ready(function(){
-// header
-  //logo
-  $('header').mouseover(function(){
-    $('.logo').children('a')
-    .css('background-image','url(../images/common/logo_mixxo_w.jpg)')
-    
-  })
-  $('header').mouseout(function(){
-    $('.logo').children('a')
-    .css('background-image','url(../images/common/logo_mixxo.jpg)')
-  })
-  //gnb_animate
-  $('.gnb>li').mouseover(function(){
-    $('.sub,.su_bgc').stop().slideDown();
-  }).mouseout(function(){
-    $('.sub,.su_bgc').stop().slideUp();
-  })
-  //burger -> close
+//header
+ //burger -> close
  $('.burger').click(function(){
   $(this).toggleClass('click');
   $('nav').toggleClass('on');
   $('.utile').toggleClass('show');
   $('.logo>a')
-  .css('background-image','url(../images/common/logo_mixxo.jpg)');
-
-
- }) 
+  .css('background-image','url(images/logo_mixxo.png)');
+ })
 //main_bnr
 const $main=$('#main'),
       $sliderWrap=$main.find('.slideWrap'),
@@ -49,12 +30,12 @@ const $ptImg=$('.ptImg'),
 
 let currentIdx=0,
     input='',
-    timer;
+    timerMain;
 
 let $imgH=$('.imgH').height();
 
 let  currentPt=0,
-      i=0;
+      pt0=0;
 // PHOTO_slide_960
 let pt=0,
     currentP=0;
@@ -81,55 +62,66 @@ let pt2=0,
       gotosliderpt(0)
     }
   })
-function gotosliderpt(i){
-  $ptImg.css('left',(-20*i)+'%');
-  currentPt=i;
+function gotosliderpt(pt0){
+  $ptImg.css('left',(-20*pt0)+'%');
+  currentPt=pt0;
 }
-gotosliderpt(i);
+
+gotosliderpt(pt0);
 
 $imgH=$('.imgH').height();
-// console.log($imgH);
-// console.log($imgH+'/'+$('.imgH').width());
 $(window).resize(function(){
   let win=$(this),
       winWid=win.width();
   $imgH=$('.imgH').height();
-  // $sliderWrap.height($imgH);
-  // console.log($imgH);
 if(winWid<=1200){
-  // $sliderWrap.height($imgH);
-  $('.main1')
-  .css('background-image','url(../images/main/main1_2.png)');
-  $('.main2')
-  .css('background-image','url(../images/main/main2_2.png)');
-  $('.main3')
-  .css('background-image','url(../images/main/main3_2.png)');
+
 
 }else{
-  $('.main1')
-  .css('background-image','url(../images/main/main1.png)');
-  $('.main2')
-  .css('background-image','url(../images/main/main2.png)');
-  $('.main3')
-  .css('background-image','url(../images/main/main3.png)');
+
+}
+if(winWid>960){
+//header
+  //logo
+  $('header').mouseover(function(){
+    $('.logo').children('a')
+    .css('background-image','url(images/logo_mixxo_w.png)');
+    
+  })
+  $('header').mouseout(function(){
+    $('.logo').children('a')
+    .css('background-image','url(images/logo_mixxo.png)');
+  })
+//GNB_slide
+  $('.gnb>li').mouseenter(function(){
+    $('.sub').css('display','block');
+    $('.su_bgc').stop().fadeIn();
+  }).mouseleave(function(){
+    $('.sub').css('display','none');
+    $('.su_bgc').stop().fadeOut();
+  })
+}else if(winWid<=960){ 
+  $('.su_bgc').hide();
+  $('.gnb>li>a').mouseover(function(){
+    $(this).next('.sub').stop().slideDown();
+  }).mouseout(function(){
+    $('.sub').stop().slideUp();
+  })
 }
 if(winWid<=960){
   //logo
   $('header').mouseover(function(){
     $('.logo').children('a')
-    .css('background-image','url(../images/common/logo_mixxo.jpg)')
+    .css('background-image','url(images/logo_mixxo.png)');
   })
-  //GNB_slide
-  $('.gnb>li').click(function(){
-    $(this).find('ul.sub').stop().slideDown();
-    $('.su_bgc').hide();
-  })
-  // .mouseout(function(){
-  //   $(this).find('ul.sub').stop().slideUp();
-  //   $('.su_bgc').hide();
-  // })
 
-
+  //main
+  $('.main1')
+  .css('background-image','url(images/main_images/main1_2.png)');
+  $('.main2')
+  .css('background-image','url(images/main_images/main2_2.png)');
+  $('.main3')
+  .css('background-image','url(images/main_images/main3_2.png)');
     // PHOTO_REVIEW_960
 $ptPrev.click(function(){
   if(currentP==0){
@@ -153,6 +145,13 @@ function gotosliderpt(pt){
 }
 gotosliderpt(pt);
 
+}else{
+  $('.main1')
+  .css('background-image','url(images/main_images/main1.png)');
+  $('.main2')
+  .css('background-image','url(images/main_images/main2.png)');
+  $('.main3')
+  .css('background-image','url(images/main_images/main3.png)');
 }
 if(winWid<=768){
   $('.cp_1').attr('src', 'images/coupon/cp1.png');
@@ -188,24 +187,11 @@ gotosliderpt(pt1);
   $('.cp_2').attr('src', 'images/coupon/coupon1.png');
 }
 if(winWid<=486){
-// MANI_background-image
-$('.main1')
-.css('background-image','url(../images/main/main1_3.png)');
-$('.main2')
-.css('background-image','url(../images/main/main2_3.png)');
-$('.main3')
-.css('background-image','url(../images/main/main3_3.png)');
 // PHOTO_REVIEW_486
 $ptPrev.click(function(){
   if(currentP2==0){
     gotosliderpt(9)
   }else{
-    $('.main1')
-    .css('background-image','url(../images/main/main1.png)');
-    $('.main2')
-    .css('background-image','url(../images/main/main2.png)');
-    $('.main3')
-    .css('background-image','url(../images/main/main3.png)');
     gotosliderpt(currentP2-1)
 
   }
@@ -233,73 +219,55 @@ gotosliderpt(pt2);
 
 
 //바로실행
-  $slides.css('width',100*slideCount+'%');
-  $slide.each(function(i){
-    let cont=$(this).find('del').text();
-    input+='<a href="#none">'+cont+'</a>';
-    $indicators.html(input);
-    // console.log();
-  });
+$slides.css('width',100*slideCount+'%');
+$slide.each(function(i){
+  let indicatorName=$(this).find('del').text();
+  input+='<a href="#none">'+indicatorName+'</a>';
+  $indicators.html(input);
+})
 
-  $indicators.find('a').click(function(e){
-    e.preventDefault();
-    let idx=$(this).index();
-    // console.log(idx);
-    gotoSlide(idx);
-    $(this).addClass('active').siblings().removeClass('active');
-  })
+$indicators.find('a').click(function(e){
+  e.preventDefault();
+  let idx=$(this).index();
+  $(this).addClass('active').siblings().removeClass('active');
+  gotoSlide(idx);
+})
 
-  function gotoSlide(idx){
-    $slides.stop().animate({'left':-100*idx+'%'},1000)
-    currentIdx=idx;
-    update();
-  }
-//allow
+function gotoSlide(idx){
+  $slides.stop().animate({'left':-100*idx+'%'},1000);
+  currentIdx=idx;
+}
+
 $allow.find('a').click(function(){
   if($(this).hasClass('bthPrve')){
-    //console.log('y');
     gotoSlide(currentIdx-1)
   }else{
-    //console.log('n');
     gotoSlide(currentIdx+1)
   }
 })
-//update
-function update(){
-  //bthPrve
+function allow(){
   if(currentIdx==0){
-    $bthPrve.addClass('disabled');
+    $bthPrve.addClass('disabled')
   }else{
-    $bthPrve.removeClass('disabled');
+    $bthPrve.removeClass('disabled')
   }
-//bthNext
   if(currentIdx==slideCount-1){
-    $bthNext.addClass('disabled');
+    $bthPrve.addClass('disabled')
   }else{
-    $bthNext.removeClass('disabled');
+    $bthPrve.removeClass('disabled')
   }
-  //indicator on
-  $indicators.find('a').eq(currentIdx).addClass('active').siblings()
-  .removeClass('active');
 }
-update();
-//start()
-function start(){
-  timer=setInterval(function(){
-      let nextIdx=(currentIdx+1)%slideCount
-      // console.log(nextIdx);
+allow();
+$indicators.find('a').eq(currentIdx).addClass('active').siblings().removeClass('active');
+
+function startMain(){
+  timerMain=setInterval(function(){
+    let nextIdx=(currentIdx+1)%slideCount;
+    console.log(nextIdx);
+    gotoSlide(nextIdx);
   },5000)
 }
-start();
-//stop
-function stop(){
-  clearInterval(timer)
-}
-
-//mouse
-$sliderWrap.mouseover(stop).mouseout(start);
-
-
+startMain();
 // it_items animate
 const $cp=$('.cp').offset().top,
       $it=$cp - 200;
@@ -592,43 +560,21 @@ let mixLeng=$mixcontsMix.length,
     }
   //mouse
   $mixx_conts.mouseover(stopMix).mouseout(startMix);
-// md_popup
+
+  // md_popup
 $('.md_dalls>a').click(function(){
   $(this).addClass('rotate').siblings().removeClass('rotate');
   $(this).next().addClass('on').siblings().removeClass('on');
 });
+
 $('.close_btn').click(function(){
   $('.md_popWrap').removeClass('on');
 });
-
-// ex_mouse
-const $tv=$('#mixxotv').offset().top;
-const $ex=$tv - 300;
-
-$(window).scroll(function(){
-  let scroll=$(this).scrollTop();
-
-  if(scroll>$ex){
-    // ex_1
-    $('.topInfor').addClass('on');
-    $('.bottomInfor').addClass('on1');
-    $('.inforTxt').addClass('on2');
-    $('.inforImg').addClass('on3');
-    // ex_2
-    $('.top_infor').addClass('animation');
-    $('.bottom_infor').addClass('animation1');
-    $('.infor_img').addClass('animation2');
-    $('.infor_txt').addClass('animation3');
-  }
-})
 
   //gotop
   $('.goTop').click(function(){
     $('html,body').animate({'scrollTop':'0'});
   })
-
-
-
 
 
 
