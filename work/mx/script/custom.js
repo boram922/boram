@@ -263,7 +263,7 @@ $indicators.find('a').eq(currentIdx).addClass('active').siblings().removeClass('
 function startMain(){
   timerMain=setInterval(function(){
     let nextIdx=(currentIdx+1)%slideCount;
-    console.log(nextIdx);
+    // console.log(nextIdx);
     gotoSlide(nextIdx);
   },5000)
 }
