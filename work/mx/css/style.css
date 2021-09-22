@@ -210,7 +210,7 @@ nav.on{display: block;}
     font-size:12px; text-transform: uppercase;
       padding-bottom:2px;}
 
-  .indicators a.active, #indicators a:hover
+  .indicators a.active, .indicators a:hover
   {border-bottom:2px solid #000; color:#000;}
 /* coupon */
   .cp{

@@ -236,6 +236,7 @@ $indicators.find('a').click(function(e){
 function gotoSlide(idx){
   $slides.stop().animate({'left':-100*idx+'%'},1000);
   currentIdx=idx;
+  allow();
 }
 
 $allow.find('a').click(function(){
@@ -252,13 +253,14 @@ function allow(){
     $bthPrve.removeClass('disabled')
   }
   if(currentIdx==slideCount-1){
-    $bthPrve.addClass('disabled')
+    $bthNext.addClass('disabled')
   }else{
-    $bthPrve.removeClass('disabled')
+    $bthNext.removeClass('disabled')
   }
+  $indicators.find('a').eq(currentIdx).addClass('active').siblings().removeClass('active');
 }
 allow();
-$indicators.find('a').eq(currentIdx).addClass('active').siblings().removeClass('active');
+
 
 function startMain(){
   timerMain=setInterval(function(){
@@ -268,6 +270,13 @@ function startMain(){
   },5000)
 }
 startMain();
+
+function stopMain(){
+  clearInterval(timerMain)
+}
+
+$sliderWrap.mouseover(stopMain).mouseout(startMain)
+
 // it_items animate
 const $cp=$('.cp').offset().top,
       $it=$cp - 200;
