@@ -254,14 +254,14 @@ h3{
   margin-bottom:50px;}
   .title1::before{
     position:absolute;
-    left:50%; top:50%; transform:translate(-160%,0);
+    left:50%; top:50%; transform:translate(-130%,0);
     display:block;
     content:''; width:200px; height:5px;
     background-color: #000;
   }
   .title1::after{
     position:absolute;
-    right:50%; top:50%; transform:translate(160%,0);
+    right:50%; top:50%; transform:translate(130%,0);
     display:block;
     content:''; width:200px; height:5px;
     background-color: #000;
@@ -281,6 +281,7 @@ h3{
       background:url(../img/상품/bnm.png) no-repeat center top;
       background-size:cover;
       }
+      .box1_1>.img:hover{opacity:.7;}
       .box1_1>.img>a{display:block;}
       .box1_1>.txt{text-align:center;}
 
@@ -289,6 +290,7 @@ h3{
     background:url(../img/상품/english.png) no-repeat center top;
     background-size:cover;
    }
+   .box1_2>.img:hover{opacity:.7;}
    .box1_2>.img>a{ display:block;}
    .box1_2>.txt{text-align:center;}
 
@@ -297,6 +299,7 @@ h3{
     background:url(../img/상품/lime.png) no-repeat center top;
     background-size:cover;
    }
+   .box1_3>.img:hover{opacity:.7;}
    .box1_3>.img>a{display:block;}
    .box1_3>.txt{text-align:center;}
 
@@ -365,13 +368,14 @@ h3{
     }
 
     /* boy_girl */
-    .bg_inner{
+    .bg{
       display:flex;
       justify-content:space-between;
       align-items:center;
+      margin-bottom: 50px;
     }
     .img_bg{
-      background:url(../img/boy_girl.png) no-repeat left center;
+      background:url(../img/boy_girl.png) no-repeat center;
       background-size:cover;
       width:700px; height:500px;
     }
@@ -386,7 +390,29 @@ h3{
     }
     .txt_bg>a:hover{background-color: #000; color:#fff;}
 
+    /* service */
+.service{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
+.txt_ser{text-align:right;}
+.txt_ser>strong{font-size:25px;}
+.txt_ser>p{font-size:18px; line-height:2.5;}
+.txt_ser>a{
+  display:block;
+  font-size:20px;
+  border: 1px solid #000; width:200px; height:50px;
+  text-align:center; line-height:50px;
+  transform:translateX(245px);
+}
+.txt_ser>a:hover{background-color: #000; color:#fff;}
+.img_ser{
+  background:url(../img/ser.png) no-repeat top -100px center;
+  background-size:cover;
+  width:700px; height:500px;
+}
 /* product_2*/
 .title2::before{
   position:absolute;
@@ -415,6 +441,7 @@ h3{
     center top;
     background-size:cover;
    }
+   .box2_1>.img:hover{opacity:.7;}
    .box2_1>.img>a{
     display:block;
     width:250px; height:300px;}
@@ -426,6 +453,7 @@ h3{
     background:url(../img/상품/lavender.png) no-repeat center top;
     background-size:cover;
    }
+   .box2_2>.img:hover{opacity:.7;}
    .box2_2>.img>a{
     display:block;
     width:250px; height:300px;}
@@ -437,6 +465,7 @@ h3{
     center top;
     background-size:cover;
    }
+   .box2_3>.img:hover{opacity:.7;}
    .box2_3>.img>a{
     display:block;
     width:250px; height:300px;}
@@ -448,6 +477,7 @@ h3{
     center top;
     background-size:cover;
    }
+   .box2_4>.img:hover{opacity:.7;}
    .box2_4>.img>a{
     display:block;
     width:250px; height:300px;}
@@ -480,6 +510,7 @@ h3{
     background:url(../img/상품/fdd.png) no-repeat center top;
     background-size:cover;
    }
+   .box3_1>.img:hover{opacity:.7;}
    .box3_1>.img>a{
     display:block;
     width:300px; height:300px;}
@@ -490,6 +521,7 @@ h3{
       background:url(../img/상품/bnml.png) no-repeat center center;
       background-size:cover;
      }
+     .box3_2>.img:hover{opacity:.7;}
      .box3_2>.img>a{
       display:block;
       width:300px; height:300px;}
@@ -500,6 +532,7 @@ h3{
     background:url(../img/상품/zxcfgfg.png) no-repeat center top;
     background-size:cover;
    }
+   .box3_3>.img:hover{opacity:.7;}
    .box3_3>.img>a{
     display:block;
     width:300px; height:300px;}
@@ -510,6 +543,7 @@ h3{
     background:url(../img/상품/wudi.png) no-repeat center top;
     background-size:cover;
    }
+   .box3_4>.img:hover{opacity:.7;}
    .box3_4>.img>a{
     display:block;
     width:300px; height:300px;}
@@ -528,6 +562,7 @@ h3{
     background:url(../img/상품/tube.png) no-repeat center top;
     background-size:contain;
    }
+   .box4_1>.img:hover{opacity:.7;}
    .box4_1>.img>a{
     display:block;
     width:300px; height:300px;}
@@ -538,6 +573,7 @@ h3{
     background:url(../img/상품/star.png) no-repeat center top;
     background-size:contain;
    }
+   .box4_2>.img:hover{opacity:.7;}
    .box4_2>.img>a{
     display:block;
     width:300px; height:300px;}
@@ -548,6 +584,7 @@ h3{
     background:url(../img/상품/velvet.png) no-repeat center top;
     background-size:contain;
    }
+   .box4_3>.img:hover{opacity:.7;}
     .box4_3>.img>a{
     display:block;
     width:300px; height:300px;}
@@ -559,6 +596,7 @@ h3{
     background:url(../img/상품/orange.png) no-repeat center top;
     background-size:contain;
    }
+   .box4_4>.img:hover{opacity:.7;}
    .box4_4>.img>a{display:block;width:200px; height:400px;}
    .box4_4>.txt{text-align:center;}
 
