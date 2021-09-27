@@ -1,5 +1,5 @@
 $(document).ready(function(){
-// 컨셉 슬라이드
+// 컨셉서 슬라이드
 //조말론
 
 const $slideWrap=$('.jmlCon_slideWrap'),
@@ -28,7 +28,7 @@ let currentJml=0,
     })
 
     function gotoslide(jml){
-      $slide.stop().animate({'left':(-110*jml)+'%'},1000);
+      $slide.stop().animate({'left':(-110*jml)+'%'});
       currentJml=jml;
     }
     gotoslide(jml);
@@ -67,7 +67,7 @@ let currentMx=0,
     })
 
     function gotoslider(mx){
-      $mxslide.stop().animate({'left':(-110*mx)+'%'},1000);
+      $mxslide.stop().animate({'left':(-110*mx)+'%'});
       currentMx=mx;
     }
     gotoslider(mx);
