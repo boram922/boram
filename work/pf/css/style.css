@@ -65,7 +65,7 @@ img{vertical-align:top; width: 100%;}
 }
 @keyframes sub{
   0%{bottom:0; opacity:0;}
-  100%{bottom:35%; opacity:1;}
+  100%{bottom:10%; opacity:1;}
 }
 .project{
   margin-top: 50px;
