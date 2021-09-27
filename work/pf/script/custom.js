@@ -28,7 +28,7 @@ let currentJml=0,
     })
 
     function gotoslide(jml){
-      $slide.stop().animate({'left':(-110*jml)+'%'});
+      $slide.stop().animate({'left':(-110*jml)+'%'},1000);
       currentJml=jml;
     }
     gotoslide(jml);
@@ -67,7 +67,7 @@ let currentMx=0,
     })
 
     function gotoslider(mx){
-      $mxslide.stop().animate({'left':(-110*mx)+'%'});
+      $mxslide.stop().animate({'left':(-110*mx)+'%'},1000);
       currentMx=mx;
     }
     gotoslider(mx);
