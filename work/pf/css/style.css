@@ -31,18 +31,23 @@ img{vertical-align:top; width: 100%;}
 }
 
 
-.me_2D{
-}
+
 .me_2D_inner{
   position:relative;
   text-align:center;
 }
-.me_2D_inner h1{margin-top:50px;}
+.me_2D_inner h1{margin-top:30px;}
+
+.animation{
+  border: 1px solid #000;
+}
+
+
 
 .meImg{
   position: relative;
   display: flex; justify-content:center;
-  width:100%; height:600px; margin:50px auto;
+  width:100%; height:550px; margin:50px auto 0 auto;
 }
 .meImg a{
   display: block;
@@ -77,20 +82,145 @@ img{vertical-align:top; width: 100%;}
 .jml h2{
   width: 500px;
   padding-bottom: 5px; box-sizing:border-box;
-  border-bottom:5px solid #666;
+  border-bottom:2px solid #666;
   color:#000;
   font-family: 'Nanum Myeongjo', serif; font-size:40px;}
-.jml li{margin-top: 10px;}
-.jml li a{font-size: 20px;}
-.jml li a:hover{color:orangered}
+.jml li{
+  border: 1px solid #bbb;
+  margin-top: 10px;}
+.jml li a{
+  display: block;
+  font-size: 20px;}
+.jml li:hover{color:orangered; border: 1px solid orangered;}
 .mx{}
 .mx h2{
-  width:200px;
+  width:300px;
   padding-bottom: 5px; box-sizing:border-box;
-  border-bottom:5px solid #666;
+  border-bottom:2px solid #666;
   color:#000;
   font-family: 'Nanum Myeongjo', serif; font-size: 40px;}
-.mx li{margin-top: 10px;}
-.mx li a{font-size: 20px;}
-.mx li a:hover{color:orangered}
+.mx li{
+  border: 1px solid #bbb;
+  margin-top: 10px;}
+.mx li a{
+  display: block;
+  font-size: 20px;}
+.mx li:hover{color:orangered; border: 1px solid orangered;}
 
+/* 컨셉서 */
+/* 조말론 */
+.jmlCon{
+  display: none;
+  position:fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,.6);
+}
+.jmlCon_slideWrap{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  height:80%;width:100%;
+  overflow:hidden;
+}
+.jmlCon_slide{
+  position:absolute;
+  top: 50%;left: 0;
+  transform:translate(-100px,-50%);
+  display: flex;
+  width: 330%; height:1500px;
+}
+.jmlCon_slide a{
+  display: block;
+  width:100%;
+  transform:scale(.6);
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.jmlCon_slide a:first-child{
+background-image:url(../images/concept/jml/1.png);
+}
+.jmlCon_slide a:nth-child(2){background-image:url(../images/concept/jml/2.png);}
+.jmlCon_slide a:last-child{background-image:url(../images/concept/jml/3.png);}
+
+.jml_allow{
+  position:absolute;
+  width: 100%;
+  top: 50%; transform:translateY(-50%);
+  display: flex; justify-content: space-between;
+}
+.jml_allow a{font-size: 70px; color:#ddd;}
+
+.closeBtn{
+  position:absolute;
+  z-index:10;
+  right:10%;
+  width: 50px; height: 50px;
+}
+.closeBtn span{
+  position: relative;
+  top: 50%; transform: translateY(-50%);
+  display: block;
+  width: 100%; height: 2px;
+  background-color: #fff;
+}
+.closeBtn span:first-child{transform:rotate(-45deg);}
+.closeBtn span:last-child{transform:rotate(45deg);}
+
+/* mx */
+.mxcon{
+  display: none;
+  position:fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,.6);
+}
+.mxslideWrap{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  height:80%;width:100%;
+  overflow:hidden;
+}
+.mxSlide{
+  position:absolute;
+  top: 50%;left: 0;
+  transform:translate(-100px,-50%);
+  display: flex;
+  width:220%; height:1600px;
+}
+.mxSlide a{
+  display: block;
+  width:100%;
+  transform:scale(.6);
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.mxSlide a:first-child{background-image:url(../images/concept/mx/1.png);}
+.mxSlide a:last-child{background-image:url(../images/concept/mx/2.png);}
+
+.mx_allow{
+  position:absolute;
+  width: 100%;
+  top: 50%; transform:translateY(-50%);
+  display: flex; justify-content:space-between;
+}
+.mx_allow a{font-size: 70px; color:#ddd;}
+
+.mxcloseBtn{
+  position:absolute;
+  z-index:10;
+  right:8%; top:0;
+  width: 50px; height: 50px;
+}
+.mxcloseBtn span{
+  position: relative;
+  top: 50%; transform: translateY(-50%);
+  display: block;
+  width: 100%; height: 2px;
+  background-color: #fff;
+}
+.mxcloseBtn span:first-child{transform:rotate(-45deg);}
+.mxcloseBtn span:last-child{transform:rotate(45deg);}
