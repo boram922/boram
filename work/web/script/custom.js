@@ -40,12 +40,12 @@ $(window).scroll(function(){
 
 //ABOUT ME!
   $('.meWrap').mouseover(function(){
-    $(this).find('a').css({'background-image':'url(../img/me/me2.png)',
+    $(this).find('a').css({'background-image':'url(img/me/me2.png)',
   'border':'none'})
     $('.metxt').css('display','none');
     $('.me2txt').css('display', 'block');
   }).mouseout(function(){
-    $(this).find('a').css({'background-image':'url(../img/me/KakaoTalk_20210928_105755995_01.jpg)','border':'1px solid #eee'})
+    $(this).find('a').css({'background-image':'url(img/me/KakaoTalk_20210928_105755995_01.jpg)','border':'1px solid #eee'})
     $('.metxt').css('display','block');
     $('.me2txt').css('display', 'none');
   });
