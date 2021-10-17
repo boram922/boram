@@ -3,7 +3,6 @@ $(document).ready(function(){
   
 $('.gnb>li').click(function(){
   $(this).addClass('on').siblings().removeClass('on');
-  $('#about1').css('padding-top',100);
 })
 
 var about=$('#about1').offset().top-200;
@@ -37,6 +36,22 @@ $(window).scroll(function(){
     gnbLi.removeClass('on')
   }
 })
+
+$(window).resize(function(){
+  let winW=$(window).width();
+
+  if(winW<=1180){
+
+  }else{
+    
+  }
+})
+
+
+
+
+
+
 
 //ABOUT ME!
   $('.meWrap').mouseover(function(){
