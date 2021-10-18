@@ -714,11 +714,13 @@ footer{
 /* JML */
 .con1Slides{width:900px;}
 .con1Indicator{bottom:10%;}
+.con1Allow a{font-size:30px;}
 .con1Closse{right:0; top:22%;}
 
 /* MX */
 .con2Slides{width:900px;}
 .con2Indicator{bottom:10%;}
+.con2Allow a{font-size:30px;}
 .con2Closse{right:0;top:22%;}
 
 }
@@ -775,7 +777,7 @@ footer{
 .Infor2>a{width:500px; height:400px;}
 .inforBtn2 a{width:100px;}
 
-.mxContwrap>span{transform:translateX(480px); }
+.mxContwrap>span{transform:translateX(480px);}
 .mxContwrap>p{font-size:13px; padding-right: 10px; box-sizing:border-box;}
 
 .mxCont1{justify-content: space-around;}
@@ -828,6 +830,22 @@ footer{
   font-size:18px;
   margin: 0;
 }
+
+
+/* 컨셉서 */
+/* JML */
+.con1Slides{width:750px;}
+.con1Indicator{bottom:18%;}
+.con1Closse{right:0; top:25%;}
+
+.con1Allow a{font-size:25px;}
+.con2Allow a{font-size:25px;}
+
+/* MX */
+.con2Slides{width:750px;}
+.con2Indicator{bottom:18%;}
+.con2Closse{right:0;top:25%;}
+
 }
 
 @media (max-width:486px){
@@ -944,7 +962,7 @@ flex-direction: column-reverse;
   font-size:13px;
 }
 .mxCont3>.mdImg1{
-  left:0; width: 400px; margin: 0 auto;
+  right:0; width: 400px; margin: 0 auto;
   transform: translate(0,0) scale(1);}
 .mxCont3>.mdImg2{
   left:50%; top: 130%; width: 400px;
@@ -974,6 +992,137 @@ flex-direction: column-reverse;
 .footer_inner>p{font-size:15px;}
 
 
+/* 컨셉서 */
+/* JML */
+.con1Slides{width:450px;}
+.con1Indicator{bottom:30%;}
+.con1Closse{right:0; top:35%;}
+.con1Closse>a{font-size: 40px;}
 
+/* MX */
+.con2Slides{width:450px;}
+.con2Indicator{bottom:30%;}
+.con2Closse{right:0;top:35%;}
+.con2Closse>a{font-size: 40px;}
+}
 
+@media (max-width:375px){
+.bigTitle{font-size:30px;}
+
+.logo a{width:150px; height:50px;}
+/* NAV */
+.gnb>li{margin-left:30px; font-size: 14px;}
+/* ABOUT */
+.meWrap{
+  height:500px;
+}
+.metxt{
+  font-size:13px;
+  letter-spacing:-1px;
+}
+.me2txt p:first-child{font-size:15px;}
+.me2txt p:last-child{font-size:12px;}
+
+.Ability_title{font-size:20px;}
+
+/* PROJECT */
+/* JML */
+.Infor>a{width:300px; height:200px;}
+.inforBtn a{width:120px;}
+.jmlContwrap{font-size:20px;}
+.jmlContwrap>p{font-size:11px; letter-spacing:-1px;}
+
+.jmlCont>p{font-size:12px;}
+.jmlCont>a{width:300px; height:180px;}
+
+.jmlCont2>p{font-size:12px;}
+.jmlCont2>a{width:300px; height: 200px;}
+
+.jmlCont3>p{font-size:12px;}
+.jmlCont3>a{width:300px; height: 200px;}
+
+/* MX */
+.Infor2>a{width:300px; height:200px;}
+.inforBtn2 a{width:120px;}
+
+.mxContwrap>span{transform:translateX(110px);}
+.mxContwrap>p{font-size:11px; letter-spacing:-1px;}
+.W486{display:block;}
+
+.mxCont1>p{font-size:12px;}
+.mxCont1>a{width:300px; height:180px;}
+
+.mxCont2>p{font-size:12px;}
+.mxCont2>a{width:300px;height:200px;}
+
+.mxCont3{
+  position: relative;
+  height:660px;
+  padding-bottom:100px; box-sizing:border-box;
+}
+.mxCont3>p{
+  padding-top: 30px; box-sizing:border-box;
+  border-top:1px solid #f3abab;
+  font-size:13px;
+}
+.mxCont3>.mdImg1{width: 300px;}
+.mxCont3>.mdImg2{width:300px;}
+.none{display:block;}
+.mdTxt1{
+  left:50%; top:40%;
+  width: 300px;
+  transform: translateX(-50%);
+}
+.mdTxt2{
+  left:50%; top:145%;
+  width: 300px;
+  transform: translate(-50%,-140%);
+}
+
+/* UX */
+.persona1,.persona2{width:350px;}
+
+/* CONTACT */
+.cont{width:200px;}
+.contact_inner>p{font-size:15px;}
+
+/* FOOTER */
+.ft_logo>a{width:100px;}
+.footer_inner>p{font-size:14px;}
+
+/* 컨셉서 */
+/* JML */
+.con1Slides{width:350px;}
+.con1Indicator{bottom:33%;}
+.con1Closse{right:0; top:38%;}
+.con1Closse>a{font-size:30px;}
+
+/* MX */
+.con2Slides{width:350px;}
+.con2Indicator{bottom:33%;}
+.con2Closse{right:0;top:38%;}
+.con2Closse>a{font-size:30px;}
+}
+@media (max-width:320px){
+.bigTitle{font-size:24px;}
+.gnb>li{margin-left:20px; font-size:12px;}
+/* PROJECT */
+.jmlContwrap>span{font-size:16px; width: 150px;}
+/* MX */
+.mxContwrap>span{transform:translateX(105px); font-size: 16px; width: 150px;}
+
+.mxCont3>.mdImg1{width:290px;}
+ /* UX */
+.persona1,.persona2{width:300px; height:250px;} 
+
+/* CONTACT */
+.cont{width:180px;}
+.contact_inner>p{font-size:13px;}
+
+/* 컨셉서 */
+/* JML */
+.con1Slides{width:300px;}
+
+/* MX */
+.con2Slides{width:300px;}
 }

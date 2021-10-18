@@ -8,7 +8,7 @@ $('.gnb>li').click(function(){
 var about=$('#about1').offset().top-200;
     project=$('#project1').offset().top-200;
     ux=$('#ux1').offset().top-200;
-    contact=$('#contact1').offset().top-400;
+    contact=$('#contact1').offset().top-600;
 
 const gnbLi=$('.gnb>li');
 
@@ -38,13 +38,15 @@ $(window).scroll(function(){
 })
 
 $(window).resize(function(){
-  let winW=$(window).width();
+  let winW=$(window).width(),
+      scrollW=$(this).scrollTop();
 
   if(winW<=1180){
 
   }else{
     
   }
+
 })
 
 
